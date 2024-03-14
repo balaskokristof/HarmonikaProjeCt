@@ -1,0 +1,13 @@
+<mat-accordion multi>
+  <mat-expansion-panel *ngFor="let item of items">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ item.title }}
+      </mat-panel-title>
+      <mat-panel-description>
+        <mat-icon (click)="item.icon = item.icon === 'expand_more' ? 'expand_less' : 'expand_more'">{{item.icon}}</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    {{ item.content }}
+  </mat-expansion-panel>
+</mat-accordion>
